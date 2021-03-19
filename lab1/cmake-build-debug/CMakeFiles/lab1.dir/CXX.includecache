@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yank0vy3rdna/projects/studying/vss/lab1/headers.h
+cstdint
+-
+
+/home/yank0vy3rdna/projects/studying/vss/lab1/main.cpp
+cstdio
+-
+cstdlib
+-
+cstring
+-
+cinttypes
+-
+headers.h
+/home/yank0vy3rdna/projects/studying/vss/lab1/headers.h
+
