@@ -27,7 +27,6 @@ int main(int argc, char **argv) {
 
     fread(data, sizeof(char), size, file);
 
-
     union {
         char *ptr;
         int *num;
@@ -132,7 +131,7 @@ int main(int argc, char **argv) {
                     s.secttab[i].NumberOfLinenumbers);
             fprintf(out_info, "\n");
 
-            if (strcmp(name_seq.seq, ".text") == 0) {
+            if ((s.secttab[i].Characteristics & 32) != 0) {
                 fseek(file, s.secttab[i].PointerToRawData, SEEK_SET);
                 char *binary_code = static_cast<char *>(malloc(s.secttab[i].SizeOfRawData));
                 fread(binary_code, 1, s.secttab[i].SizeOfRawData, file);
